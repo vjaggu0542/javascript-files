@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        function splitarr(arr,size){
+        var newarr = [];
+        var split = 0;
+       
+        while(split < arr.length){
+        newarr.push(arr.slice(split, split+size))
+         split += size;  
+        }
+      return newarr;
+    }
+  
+   console.log(splitarr(['a','b','c','d','e','f'],3));
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

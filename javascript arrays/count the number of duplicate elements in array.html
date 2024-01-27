@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>duplicate values</title>
+
+    <script>
+        var arr = ["sunday","monday","wednesday","thursday","monday","saturday","sunday"];
+    var count = 0;
+    
+    for(var i=0;i<arr.length;i++){
+        for(var j=i+1;j<=arr.length;j++){
+            if(arr[i] == arr[j]){
+                count++;
+               
+                break;
+            }
+        }  
+    }
+    document.write(`duplicate elements:: ${count}`);
+ 
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

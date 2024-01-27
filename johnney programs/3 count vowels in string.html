@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var string = "count vowels in given string";
+        var result = string.match(/[o]/gi)
+        document.write(result);
+        document.write("<br>");
+       
+        var result1 = string.match(/[^o]/gi)
+        document.write(result1);
+        document.write("<br>");
+
+        var vowels = string.match(/[aeiou]/gi)
+        document.write(vowels);
+        document.write("<br>");
+        document.write(vowels.length);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

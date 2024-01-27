@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>palindrome</title>
+    <script type="text/javascript">
+        var number = prompt("please enter a number")
+        var resp = number.length;
+        for(var i=0; i<resp/2; i++ ){
+            if(number[i] == number[resp - 1 - i]){
+              var result = `${number} is a palindome`;
+              document.write(result);
+              break;
+            }
+            else{
+                var result = `${number} is not a palindome`;  
+                document.write(result);
+                break;
+            }
+        }
+          
+        </script>
+
+</head>
+<body>
+    
+</body>
+</html>

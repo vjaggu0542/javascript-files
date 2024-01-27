@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+          var string = prompt("please enter a string");
+          var stringstarts = string.startsWith('j');
+          var stringend = string.endsWith('h');
+
+          if(stringstarts == true && stringend == true){
+              document.write(`${string} is starts with "j", ends with "h"`);
+          }
+          else if(stringstarts == true && stringend == false){
+            document.write(`${string} is starts with "j", not ends with "h"`);
+          }
+          else if(stringstarts == false && stringend == true){
+            document.write(`${string} is not starts with "j",  ends with "h"`);
+          }
+          else {
+            document.write(`${string} is not starts with "j", not ends with "h"`);
+          }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

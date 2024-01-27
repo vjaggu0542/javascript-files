@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //replace
+        var string = "this is the javascript the string";
+        var rep = "the";
+        console.log(string.replace(rep,"angular"));
+
+        //replaceall
+        var s = "this is the javascript the string";
+        var r = "the";
+        console.log(s.replaceAll(r,"angular"));
+
+        //replaceall
+        var st = "this is the javascript The string";
+        console.log(st.replace(/the/gi,"angular"));
+
+        //replaceall
+        var search = ' ';
+        var repl = '*';
+        var result = "dog dog go".replaceAll(search,repl);
+        console.log(result);
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

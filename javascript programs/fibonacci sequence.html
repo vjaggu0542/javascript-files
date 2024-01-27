@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fibonacci sequence</title>
+    <script type="text/javascript">
+        var a= 0; b = 1;
+        document.write(a);
+        document.write("<br>");
+        document.write(b);
+        document.write("<br>");
+        for(var i = 0; i<=10; i++){
+            var temp = a + b;
+            document.write(temp);
+            document.write("<br>");
+            a = b;
+            b = temp;
+        }
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

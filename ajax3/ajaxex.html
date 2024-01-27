@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>get data from rest api</h1>
+    <input type="button" onclick="mydata()" value="get data">
+    <div id="data"></div>
+<script>
+     function mydata(){
+        let vjk = new XMLHttpRequest();
+        vjk.open("GET","https://restcountries.com/v3.1/name/india") 
+        vjk.send()
+
+        vjk.onprogress = function(){
+            document.getElementById("data").innerHTML = "lodeing...................."
+        }
+
+        vjk.onload = function(){
+            if(vjk.status == 200){
+                let res = vjk.responseText
+                res = JSON.parse(res)
+               let [country] = res
+                document.getElementById("data").innerHTML = `<img src="${country.flags.png}">`
+                 console.log(country)
+                 
+            }
+            else{
+                document.getElementById("data").innerHTML = "data not found"
+            }
+
+        }
+     }
+</script>
+    <script>
+
+    </script>
+</body>
+</html>

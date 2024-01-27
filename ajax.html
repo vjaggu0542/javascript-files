@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style></style>
+</head>
+
+
+<body>
+    <div>
+        <input type="button" name="" id="spl" value="click me for ajax magic" >
+        <div id="ajaxexp"></div>
+
+    </div>
+     <script>
+let btn = document.getElementById("spl")
+let ajxex = document.getElementById("ajaxexp")
+btn.addEventListener('click',ajaxfunct)
+
+function ajaxfunct(){
+
+let xhr = new XMLHttpRequest();
+xhr.open('GET','text.txt',true);
+xhr.send();
+
+ xhr.onprogress = function(){
+    ajxex.innerText = "loading.....";
+}
+
+xhr.onlode = function(){
+   ajxex.innerHTML = xhr.responseText;
+}
+
+}
+
+     </script>
+</body>
+</html>

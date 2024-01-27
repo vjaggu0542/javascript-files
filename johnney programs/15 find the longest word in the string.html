@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var str = "find the longest word in the string using with javascript";
+        var strm = str.split(" ");
+        var longestword = 0;
+        for(var i=0; i<strm.length;i++){
+            if(strm[i].length > longestword){
+               longestword = strm[i].length;
+               var word = strm[i];
+            }
+        }
+        document.write("longest word is :" + word  +  " <br>length is :" + longestword )
+      
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

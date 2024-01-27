@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form validation</title>
+   <style>
+     
+           input{width: 200px;
+            height: 20px;
+            border: 2px solid blue;
+            border-radius: 5px;
+
+
+           }
+          
+          
+           #btn{
+               background-color: darkslateblue;
+               color: aliceblue;
+               border-radius: 0px 50px;
+           }
+           #btn:hover{
+               background-color: blue;
+           }
+           span{
+               color: red;
+           }
+       </style>
+   <script>
+       function validation(){
+           var userr = document.getElementById("user").value;
+           var passs = document.getElementById("pass").value;
+           var confirmpasss = document.getElementById("confirmpass").value;
+           var emails = document.getElementById("email").value;
+           var numbers = document.getElementById("number").value;
+
+           //user name validation
+           if(userr == ""){
+               document.getElementById("userspan").innerText = "**please enter username in the box**";
+               return  false;
+            }
+               if(userr.length<3){
+                document.getElementById("userspan").innerText = "**please enter atleast 3 characters**";
+                return  false;
+               }
+               if(!isNaN(userr)){
+                document.getElementById("userspan").innerText = "**please enter alphabet characters**";
+                return  false;
+               }
+               else{
+                document.getElementById("userspan").innerText = ""; 
+               }
+           
+//password validation
+
+           if(passs == ""){
+               document.getElementById("passspan").innerText = "**please enter password in the box";
+               return  false;
+           }
+           if(passs.length<8){
+               document.getElementById("passspan").innerText = "**please enter atleast 8 characters";
+               return  false;
+           }
+           if(passs.search(/[0-9]/)==-1){
+               document.getElementById("passspan").innerText = "**please enter atleast 1 numaric digit";
+               return  false;
+           }
+           if(passs.search(/[a-z]/)==-1){
+               document.getElementById("passspan").innerText = "**please enter atleast 1 small letter";
+               return  false;
+           }
+           if(passs.search(/[A-Z]/)==-1){
+               document.getElementById("passspan").innerText = "**please enter atleast 1 capital letter";
+               return  false;
+           }
+           if(passs.search(/[!/@/$/%/^/&/*/(/)/-/_/=/+/[/,/./,]/)==-1){
+               document.getElementById("passspan").innerText = "**please enter atleast 1 special letter";
+               return  false;
+           }
+           else{
+                document.getElementById("passspan").innerText = ""; 
+               }
+           
+           
+
+//confirm password validation
+           if(confirmpasss == ""){
+               document.getElementById("confirmpassspan").innerText = "**please enter confrm password in the box";
+               return  false;
+           }
+           if(confirmpasss != passs){
+               document.getElementById("confirmpassspan").innerText = "**password not matched";
+               return  false;
+           }
+           else{
+                document.getElementById("confirmpassspan").innerText = ""; 
+               }
+
+
+
+//email validation
+           if(emails == ""){
+               document.getElementById("emailspan").innerText = "**please enter email in the box";
+               return  false;
+           }
+           if(emails.search(/[@]/)==-1){
+               document.getElementById("emailspan").innerText = "**email address not valid";
+               return  false;
+           }
+           else{
+                document.getElementById("emailspan").innerText = ""; 
+               }
+
+
+
+//number validation
+           if(numbers == ""){
+               document.getElementById("numberspan").innerText = "**please enter number in the box";
+               return  false;
+           }
+           if(numbers.length>10 || numbers.length<10){
+            document.getElementById("numberspan").innerText = "**please enter 10 digits mobile number";
+            return  false;
+           }
+           if(isNaN(numbers)){
+            document.getElementById("numberspan").innerText = "**please enter number only";
+            return  false;
+           }
+           else{
+                document.getElementById("numberspan").innerText = ""; 
+               }
+
+
+               //radio button validation
+
+            /*   var r = document.forms.radioname;
+
+               for(var i=0; i<r.length; i++){
+                   if(r[i].checked == true)
+                   return true;
+               }
+               document.getElementById("radiospan").innerText = "**please select anyone**"; 
+               return false; */
+ 
+               var gender1 = document.getElementById("male").value;
+               var gender2 = document.getElementById("female").value;
+
+               if(gender1.checked == true || gender2.checked == true){
+                   return true;
+               }
+              
+               else{
+                document.getElementById("radiospan").innerText = "**please select anyone**"; 
+               
+               }
+
+
+       }
+   </script>
+</head>
+<body>
+    <div>
+        <form name="forms" action="#" onsubmit="return validation()" novalidate="off">
+            <table cellspacing= "10" align="center">
+                <tr><td><input type="text" id="user" placeholder="Username">
+                    <br> <span id="userspan"></span></td></tr>
+                    <tr><td><input type="text" id="pass" placeholder="Password">
+                        <br> <span id="passspan"></span></td></tr>
+                        <tr><td><input type="text" id="confirmpass" placeholder="Confirmpassword">
+                            <br> <span id="confirmpassspan"></span></td></tr>
+                            <tr><td><input type="text" id="email" placeholder="Email">
+                                <br> <span id="emailspan"></span></td></tr>
+                                <tr><td><input type="text" id="number" placeholder="Mobile number">
+                                    <br> <span id="numberspan"></span></td></tr>
+                                    <tr>
+                                        <td>
+                                            <input style="width:10px;" type="radio" name="gender" id="male" value="male">
+                                            <label for="male">male</label>
+                                            <input style="width:10px;" type="radio" name="gender" id="female" value="female">
+                                            <label for="female">female</label>
+                                            <br> <span id="radiospan"></span>
+                                        </td>
+                                    </tr>
+                                 <tr><td><input type="submit" id="btn"></td></tr>
+
+            </table>
+        </form>
+    </div>
+    
+</body>
+</html>

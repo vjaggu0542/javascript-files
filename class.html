@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div></div>
+    <script>
+        class mobiles{
+            constructor(a,b){
+                this.name = a,
+                this.memory = b
+            }
+
+            updateram(uram){
+                this.memory = uram
+            }
+
+            set setprice(p){
+                if(p<=0){
+                    alert("please enter a above zero")
+                }
+                else{
+                    this.price = p
+                }
+            }
+            get getname(){
+                return "get name :" + this.name 
+            }
+        }
+
+        let m1 = new mobiles("vivo","4gb")
+        let m2 = new mobiles("mi","8gb")
+
+        console.log(m1)
+        console.log(m2)
+        m2.updateram("12gb")
+        console.log(m2)
+    </script>
+</body>
+</html>

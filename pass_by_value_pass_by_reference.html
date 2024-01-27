@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // number,boolian, string  (pass by value)
+        // let x = 20
+
+        // function test(x){
+        //   x = x+1
+        //   document.write("inner function :" + x + "<br>")
+        // }
+
+        // document.write("before :" + x + "<br>")
+        // test(x)
+        // document.write("after :" + x + "<br>")
+
+    // array, object (pass by reference)
+
+        let x = [21]
+
+        function test(x){
+          x[0] = x[0]+1
+          document.write("inner function :" + x[0] + "<br>")
+        }
+        
+        document.write("before :" + x[0] + "<br>")
+        test(x)
+        document.write("after :" + x[0] + "<br>")
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class people{
+            constructor(n,m){
+                this.name = n,
+                this.mobile = m
+            }
+            getpeople(){
+                console.log("name :", this.name , "\n mobile: ", this.mobile)
+            }
+        }
+
+        class employee extends people{
+            constructor(n,m,s,c){
+                super(n,m)
+                this.salary = s,
+                this.company = c
+            }
+            getemployee(){
+                console.log("salary :", this.salary , "\n company: ", this.company)
+            }
+        }
+
+        let m1= new people("jagadeesh", 8985431798)
+        let m2= new employee("sathish", 7095441110,45000,"omics")
+    </script>
+</body>
+</html>

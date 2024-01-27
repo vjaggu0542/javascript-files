@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<h1>promise</h1>
+    <p id="resultdata"></p>
+</head>
+<body>
+
+    <script>
+        function proex(somedata){
+            document.getElementById("resultdata").innerText = somedata
+        }
+
+        let p =new  Promise(
+
+        function(success,error){
+            let resdata = 1
+            if(resdata){
+                success("condition success")
+            }
+            else{
+            error("faild condition")
+            }
+        }
+        );
+
+        p.then(function(data){
+                   proex(data)
+        });
+        p.catch(function(data){
+            proex(data)
+        })
+        
+    </script>
+    
+</body>
+</html>

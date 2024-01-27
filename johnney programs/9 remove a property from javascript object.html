@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var o = {};
+        o['name'] = "javascript";
+        o.age = 28;
+        console.log(o);
+
+        console.log(o.hasOwnProperty('age'));
+        delete o.age;
+        console.log(o.hasOwnProperty('age'));
+        var student = {
+            name : "javascript",
+            age :30,
+            hobbies : ['cricket','chess'],
+            greet:function(){
+                console.log("tutorials");
+
+            },
+            score : {
+                react:80,
+                angular:10
+            }
+        }
+        
+        console.log(student)
+      delete student.greet;
+      delete student['score']
+      console.log(student)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

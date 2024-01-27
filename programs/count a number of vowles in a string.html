@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vowlels checking</title>
+    <script type="text/javascript">
+        var string = prompt("please enter a number");
+        var reg = /[aeiou]/gi;
+
+        var result = string.match(reg);
+        var resultindi = result.join(',');
+        var resultlength = result.length;
+
+        var stringcount = string.split('');
+        document.write(resultindi);
+        document.write("<br>");
+        document.write(resultlength);
+        document.write("<br>");
+        document.write(stringcount);
+        document.write("<br>");
+        document.write(stringcount.length);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

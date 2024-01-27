@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+      function  checkthevalue(){
+          var aa = document.getElementById("aaa");
+          var bb = document.getElementById("bbb");
+          if(aa.checked == true){
+              bb.style.display = "block";
+          }
+          else{
+            bb.style.display = "none";
+          }
+                 
+        }
+    </script>
+</head>
+<body>
+    select <input type="checkbox" onclick="checkthevalue()" id="aaa">
+    <p id="bbb" style="display:none ;">javascript</p>
+    
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        document.write("using with for loop" + "<br>")
+        var a =[10,20,30,40,50]
+       
+        for(var i=0; i<a.length;i++){
+            document.write(a[i] + "<br>");
+        }
+        
+
+        document.write("using with for loop 2nd method" + "<br>")
+        var s= new Array();
+        s[0] = 10;
+        s[1] = 20;
+        s[2] = 30;
+        s[3] = 40;
+
+        for(var i=0; i<s.length;i++){
+            document.write(s[i] + "<br>");
+        }
+
+        document.write("using with for in loop " + "<br>")
+         var b =["red","blue","green"];
+         for(let a in b){
+            document.write(b[a] + "<br>");
+         }
+
+         document.write("using with for of loop " + "<br>")
+         var c =["red","blue","green"];
+         for(let a of c){
+            document.write(a + "<br>");
+         }
+
+
+         document.write("using with foreach " + "<br>")
+         var d =["red","blue","green"];
+         d.forEach(function(a,index){
+            document.write(a + "<br>"); 
+         })
+         
+        </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=div, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <div>
+    <p>date</p>
+    <p id="date" ></p>
+    <script>
+        setInterval(updatetime,1000)
+       
+function updatetime(){
+    var d = new Date();
+document.getElementById("date").innerHTML = d.toLocaleTimeString();
+
+}
+    </script>
+   </div> 
+</body>
+</html>

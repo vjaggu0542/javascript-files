@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>json ex</h1>
+    <input type="button" value="click me" onclick="myfun()">
+<div id="demo"></div>
+    <script>
+        function myfun(){
+            let jkv = new XMLHttpRequest();
+            jkv.open("GET","jstext.json")
+            jkv.send()
+
+            jkv.onload = function(){
+               if(jkv.status == 200){
+                  let result = jkv.responseText
+                  result = JSON.parse(result)
+
+                   let str =  `<table border="2"><tr>`
+                    for(key in result){
+                        str = str + `<th>${key}</th>`
+                    }
+                    str = str +`</tr><tr>`
+                        for(key in result){
+                        str = str + `<td>${result[key]}</td>`
+                    }
+                    str = str + `</tr></table>`
+
+
+                     document.getElementById("demo").innerHTML = str
+                    console.log(jkv.status)
+                }
+                  else{
+                    document.getElementById("demo").innerHTML = "no data found"
+                       }
+                
+            }
+        }
+    </script>
+    
+</body>
+</html>

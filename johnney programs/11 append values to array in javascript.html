@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //push
+        var arr = ["raju", "ravi", "ramu"]
+        arr.push("raki");
+        document.write(arr + "<br>");
+        arr.push("sathish","jagadeesh");
+        document.write(arr + "<br><br><br>");
+        //for
+        for(var i=0; i<arr.length;i++){
+            document.write(arr[i] + "<br>")
+        }
+        //concat
+        var names = arr.concat([1,2,3,4]);
+        document.write(names + "<br>")
+        //unshift
+        var a = ["raju", "ravi", "ramu"];
+        a.unshift([1,2,3,4]);
+        document.write(a + "<br>")
+        
+        //spread
+        var b = ["raju", "ravi", "ramu"];
+        var newnames = [...b, "jagadeesh"]
+        document.write(newnames + "<br>")
+
+
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

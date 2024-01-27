@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>json example</h1>
+   
+    <input type="button" onclick="myfun()" value="click me">
+    <script>
+    
+    function myfun(){
+    let jkr = new XMLHttpRequest();
+    jkr.open("GET","test.txt",true);
+    jkr.send();
+   
+    jkr.onlode = function(){
+    let result = jkr.responseText
+    // result = JSON.parse(result)
+    console.log(result)
+
+    }
+}  
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let previousdata = {}
+
+        function addition(n){
+
+            if(n in previousdata){
+                return previousdata[n]
+            }
+            else{
+                let res = 0
+            for(i=0; i<=n; i++){
+               res = res + i
+            }
+            previousdata[n] = res;
+            return res
+            }
+        }
+        console.time()
+        console.log("start")
+        console.log(addition(10000))
+        console.timeEnd()
+        console.time()
+        console.log("start")
+        console.log(addition(10000))
+        console.timeEnd()
+    </script>
+</body>
+</html>

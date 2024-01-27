@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>swap two numbers</title>
+    <script type="text/javascript">
+
+        
+            var a = parseInt(prompt("please enter number"));
+            var b = parseInt(prompt("please enter number"));
+
+            //method one
+         /*  document.write(`before change <br> a value ${a} <br> b value ${b} <br><br>`);
+            var temp =a;
+            a=b;
+            b=temp;
+            document.write(`after change <br> a value ${a} <br> b value ${b}`); */
+
+           // method two
+
+            document.write(`before change <br> a value ${a} <br> b value ${b} <br><br>`);
+            a =a+b;
+            b=a-b;
+            a=a-b;
+            document.write(`after change <br> a value ${a} <br> b value ${b}`);
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

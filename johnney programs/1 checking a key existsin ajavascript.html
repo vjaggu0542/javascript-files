@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var student = {
+            name : "raju",
+            age : 30
+        }
+        document.write("name" in student);
+        document.write("<br>");
+        document.write(student.hasOwnProperty('name'));
+        document.write("<br>");
+        document.write("<br>");
+
+        var list = {
+            name : "raju",
+            age : 30
+        }
+        var check = list.hasOwnProperty('name');
+        if(check){
+            document.write("key exists");
+        }
+        else{
+            ocument.write("key does not exists");
+        }
+            </script>
+</head>
+<body>
+    
+</body>
+</html>

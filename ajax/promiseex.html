@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>promise exa</h1>
+    <button onclick="myfunction()">click me</button>
+    <p id="details"></p>
+    <script>
+function myfunction(){
+    let p = new Promise(function(success,error){
+        let xhr = new XMLHttpRequest()
+        xhr.open("GET","test.txt",true)
+        xhr.send()
+
+        xhr.onlode = function(){
+            if(xhr.status == 200){
+                success(xhr.responseText)
+            }
+            else
+            {
+                error("data not found")
+            }
+        } 
+    })
+    console.log(p)
+    p.then(function(data){
+       
+document.getElementById("details").innerText = data
+    })
+    p.catch(function(data){
+document.getElementById("details").innerText = data
+    })
+
+}
+
+    </script>
+</body>
+</html>

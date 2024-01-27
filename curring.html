@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div></div>
+    
+</body>
+<script>
+    // example 1
+    // function mycurry(a){
+    //     return function(b){
+    //         return function(c){
+    //             return function(d){
+    //                 return a+b+c+d
+    //             }
+    //         }
+    //     }
+    // }
+    // document.write(mycurry(1)(2)(3)(4))
+
+
+    // example 2
+
+    function mycurrmul(a){
+        return function(b){
+            return a*b
+        }
+    }
+    let fithtable = mycurrmul(5);
+    
+        for( let i=0;i<=10;i++){
+            document.write(`5 x ${i} = ${fithtable(i)} <br>`)
+        }
+
+      
+   
+    
+</script>
+</html>

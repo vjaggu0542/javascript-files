@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        var string = "count the number of words in a string";
+        var splitcharacters = string.split('');
+        document.write(splitcharacters);
+        document.write("<br>")
+        document.write(splitcharacters.length);
+        document.write("<br>");
+
+        var splitwords = string.split(' ');
+        document.write(splitwords)
+        document.write("<br>");
+        document.write(splitwords.length);
+        document.write("<br>");
+
+        function splitstringwords(s){
+       return s.split(' ')
+        }
+        document.write(splitstringwords("count the number of words in a string"));
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

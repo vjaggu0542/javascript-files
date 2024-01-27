@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sum of two numbers</title>
+    <script type="text/javascript">
+        function sum(num){
+            if(num>0){
+                return num + sum(num-1);
+            }
+            else{
+                return num;
+            }
+        }
+         var number = sum(4);
+         document.write(number);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
